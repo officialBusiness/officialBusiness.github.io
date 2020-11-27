@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom'
 import './index.css'
  
 const Hello = () => {
-	return <h1>Hello, world!</h1> ;
+	return <h1>Hello, world!11</h1> ;
 }
  
 ReactDOM.render(

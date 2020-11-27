@@ -40,15 +40,21 @@ module.exports = {
 			}
 		]
 	},
-	devtool: 'inline-source-map',
+	// devtool: 'source-map',
 	plugins: [
     new HtmlWebpackPlugin({
-      title: '博客',
-    }),
+      title: '轮回的博客',   //生成的页面标题
+      // filename:'index.html',  //webpack-dev-server在内存中生成的文件名称，自动将build注入到这个页面底部，
+      // template:'index.html',  //根据index.html这个模版来生成（这个文件请程序员自己生成）
+    })
   ],
 	devServer: {
 		port: 8081 ,
-		contentBase: './webpack',
-		// hot: true
-	}
+		contentBase: path.resolve(__dirname, 'node_modules'),
+		hot: true,
+	},
+	performance: {
+    maxEntrypointSize: 1024*1024*8,
+    maxAssetSize: 1024*1024*8,
+  }
 }
