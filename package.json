@@ -1,9 +1,10 @@
 {
   "name": "officialBusiness.github.io",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "webpack --config webpack.config.js",
+    "start": "webpack serve --open",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +17,21 @@
   "bugs": {
     "url": "https://github.com/officialBusiness/officialBusiness.github.io/issues"
   },
-  "homepage": "https://github.com/officialBusiness/officialBusiness.github.io#readme"
+  "homepage": "https://github.com/officialBusiness/officialBusiness.github.io#readme",
+  "description": "",
+  "dependencies": {
+    "@babel/cli": "^7.12.8",
+    "@babel/core": "^7.12.9",
+    "@babel/preset-env": "^7.12.7",
+    "@babel/preset-react": "^7.12.7",
+    "babel-loader": "^8.2.2",
+    "css-loader": "^5.0.1",
+    "html-webpack-plugin": "^4.5.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.8.0",
+    "webpack-cli": "^4.2.0",
+    "webpack-dev-server": "^3.11.0"
+  }
 }
