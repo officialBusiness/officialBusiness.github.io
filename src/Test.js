@@ -11,10 +11,13 @@ function Test() {
 			marginLeft: '10px'
 		}}>
 			<Triangle />
+			<br/>
 			<Arrow />
+			<br/>
 			<InputNumber />
 			<br/>
 			<Dropdown />
+			<br/>
 		</div>
 	);
 }
