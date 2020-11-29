@@ -24,6 +24,14 @@ module.exports = {
 				]
 			},
 			{
+        test: /\.scss/, //配置sass转css
+        use: [
+          { loader: 'style-loader' },
+          { loader: 'css-loader' },
+          { loader: 'sass-loader' },
+        ],
+      },
+			{
 				test: /\.jsx?/,
 				// 排除 node_modules 目录下的文件，防止被打抱
 				exclude: path.resolve(__dirname, 'node_modules'),

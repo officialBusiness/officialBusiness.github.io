@@ -1,15 +1,11 @@
 // document.body.innerText = 'Hello, myBlog';
 
-
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
- 
-const Hello = () => {
-	return <h1>Hello, world!</h1> ;
-}
- 
+import Test from './src/Test.js'
+
 ReactDOM.render(
-	<Hello/>,
+	<Test/>,
 	document.body
 );
