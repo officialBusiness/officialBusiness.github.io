@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import './index.css'
-import Test from './src/Test.js'
 
 ReactDOM.render(
-	<Test/>,
+	<div>
+		轮回的博客
+	</div>,
 	document.body
 );
