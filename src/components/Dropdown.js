@@ -2,10 +2,10 @@
 import React from 'react';
 import './Dropdown.scss'
 
-export default ({onChange, step = 1, max, min, value = 0})=>{
+export default ({menu})=>{
 	// const [menuClass, setMenuClass] = useState(' hidden')
 	return (
-		<div className={'Dropdown'} 
+		<div className={'dropdown'} 
 			onMouseEnter={(e)=>{
 				// setMenuClass('')
 			}}
@@ -15,18 +15,19 @@ export default ({onChange, step = 1, max, min, value = 0})=>{
 			<div className={'dropdown-back'}>
 				<span>下拉菜单</span>
 			</div>
-			<div className={'menu'} >
-				{
-					[1,2,3,4].map((item, index)=>{
-						return (
-							<div className={'menu-item'} key={index} onClick={(e)=>{
-								console.log('点击了选项', index)
-							}}>选项{index}</div>
-						)
-					})
-				}
+			<div className={'dropdown-menu-container'}>
+				<div className={'dropdown-menu'} >
+					{
+						menu.map((item, index)=>{
+							return (
+								<div className={'dropdown-menu-item'} key={index} onClick={(e)=>{
+									console.log('点击了选项', index)
+								}}>{item}</div>
+							)
+						})
+					}
+				</div>
 			</div>
 		</div>
 	)
 }
-
